@@ -1,0 +1,105 @@
+@font-face {
+  font-family: digit;
+  src: url(font.ttf);
+}
+
+
+body {
+  width: 450px;
+  margin: 15vh auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 5px;
+  font-size: 1.8rem;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  background: #fff;
+  perspective: 500px;
+}
+
+.calculator {
+  transform: rotateX(10deg) rotateY(15deg) rotateZ(5deg);
+  padding: 20px;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 10px 14px 0px rgb(0 0 0 / 44%);
+  border-radius: 10px;
+  background: #d1d1d1;
+  /* color: #fff; */
+  box-shadow: inset -5px -5px 7.5px 0px rgb(0 0 0 / 6%), inset 5px 5px 5px rgb(255 255 255 / 20%);
+}
+
+.input {
+  margin:5px;
+  font-family: digit;
+  border-radius: 10px;
+  height: 60px;
+  padding-right: 15px;
+  padding-top: 10px;
+  text-align: right;
+  font-size: 3rem;
+  overflow-x: auto;
+  transition: all .2s ease-in-out;
+  background-color:#cadaca;
+  color:#030;
+  -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.operators {
+  display: flex;
+  flex:1;
+  min-width: 100%;
+}
+.operators>*{flex:1}
+.leftPanel{
+  display: flex;
+  flex:1;
+  flex-wrap: wrap;
+}
+.leftPanel>*{
+  flex:1;
+  min-width: 30%;
+}
+.equal{
+  flex:0.3;
+  margin:5px;
+}
+
+.buttons>*>*{
+  margin:5px;
+}
+.numbers div, .operators div, div.equal  {
+  box-shadow: inset -5px -5px 7.5px 0px rgb(0 0 0 / 6%),
+   inset 5px 5px 5px rgb(255 255 255 / 20%), 
+   1px 1px 2px 0px rgb(0 0 0 / 43%), 
+   -1px -1px 4px 0px rgb(0 0 0 / 4%);
+  background-color: #e6e6e6;
+  color:#999;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+#clear{
+  background-color:#fdd;
+}
+.numbers div:hover,  .operators div:hover, div.equal:hover  {
+  color:#fff;
+}
+.numbers div:active, .operators div:active, div.equal:active  {
+   background-color: #0000008f;
+/*   box-shadow: 0px 0px 14px 10px rgb(255 255 255 / 100%); */
+
+  box-shadow: inset -5px -5px 7.5px 0px rgb(0 0 0 / 6%),
+   inset 5px 5px 5px rgb(255 255 255 / 20%),  
+   0px 0px 20px 0px rgb(255 255 255);
+  border-color: #bbb;
+  background-color :#f7fbff;
+  color:#c2faff;
+  font-weight: bold;
+}
